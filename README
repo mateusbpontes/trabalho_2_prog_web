@@ -1,0 +1,13 @@
+Implemente um sistena de e-Commerce:
+  * informações sobre os clientes
+  * compras
+  * produtos comprados
+  * produtos disponíveis
+  * Cada produto pode ter múltiplas categorias. 
+  * Tratar sessão de login
+  * Internacionalização
+  * Utilizar modelo MVC
+  * Apache Ant
+  * Upload de imagem do produto
+  * Utilizar criptografia para senha de usuário (não MD5)
+
