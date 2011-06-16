@@ -1,4 +1,4 @@
-package ecommmerce.servlets.user;
+package ecommerce.servlets.user;
 import ecommerce.core.*;
 
 import java.util.*;
