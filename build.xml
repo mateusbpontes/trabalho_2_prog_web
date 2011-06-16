@@ -1,22 +1,25 @@
 <?xml version="1.0"?>
 <project name="E-commerce" default="all" basedir=".">
+
+	<property name="lib" value="${basedir}/lib"/>
+	<property name="web" value="${basedir}/web"/>
+	<property name="src" value="${basedir}/src"/>
+	<property name="build" value="${basedir}/build"/>
+	<property name="classdir" value="${basedir}/build/classes"/>
+	<property name="warDir" value="${basedir}/build/war"/>
+	<property name="earDir" value="${basedir}/build/ear"/>
+	<property name="tomcatDir" value="/usr/local/Cellar/tomcat/6.0.26/libexec"/>
+
+	<!-- WAR and EAR FILES -->
+	<property name="warFile" value="ecommerce.war"/>
+	<property name="earFile" value="ecommerce.ear"/>
+
 	<path id="project.class.path">
-		<pathelement location="lib/"/>
-		<pathelement path=""/>
+		<fileset dir="${tomcatDir}/lib"/>
 	</path>
 
-	<target name="init">
-		<property name="lib" value="${basedir}/lib"/>
-		<property name="web" value="${basedir}/web"/>
-		<property name="src" value="${basedir}/src"/>
-		<property name="build" value="${basedir}/build"/>
-		<property name="classdir" value="${basedir}/build/classes"/>
-		<property name="warDir" value="${basedir}/build/war"/>
-		<property name="earDir" value="${basedir}/build/ear"/>
 
-		<!-- WAR and EAR FILES -->
-		<property name="warFile" value="ecommerce.war"/>
-		<property name="earFile" value="ecommerce.ear"/>
+	<target name="init">
 
 		<!-- Create Web-inf and classes directories -->
 		<mkdir dir="${build}"/>
@@ -35,7 +38,7 @@
 
 	<!-- Compile Java Files and store in /build/src directory -->
 	<target name="build" >
-		<javac srcdir="${src}" destdir="${classdir}" debug="true" includes="**/*.java">
+		<javac srcdir="${src}" destdir="${classdir}" debug="true" includes="**/*.java" includeantruntime="false">
 			<classpath refid="project.class.path"/>
 		</javac>
 	</target>

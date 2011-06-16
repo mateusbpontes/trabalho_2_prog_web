@@ -1,6 +1,10 @@
 package ecommerce.servlets.admin;
 
-public class ProductsServlets extends HtmlServlet implements Default {
+import javax.servlet.*;
+import javax.servlet.jsp.*;
+import javax.servlet.http.*;
+
+public class ProductServlet extends HttpServlet {
 	public void add() {
 
 	}

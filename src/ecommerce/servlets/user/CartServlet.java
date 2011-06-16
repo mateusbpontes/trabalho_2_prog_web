@@ -1,7 +1,10 @@
 /* Store the cart on the session? */
 package ecommerce.servlets.user;
 
-public void CartServlet extends HttpServlet implements Default {
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class CartServlet extends HttpServlet {
 	public void index() {
 
 	}

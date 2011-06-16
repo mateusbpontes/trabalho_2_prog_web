@@ -1,7 +1,11 @@
 package ecommerce.servlets;
 
-public class SessionServlet extends HttpServlet implements Default { 
-	public void logIn(User user) {
+import javax.servlet.*;
+import javax.servlet.jsp.*;
+import javax.servlet.http.*;
+
+public class SessionServlet extends HttpServlet { 
+	public void logIn() {
 
 	}
 

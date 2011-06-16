@@ -1,6 +1,9 @@
 package ecommerce.servlets.user;
 
-public void ProfileServlet extends HttpServlet implements Default { 
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class ProfileServlet extends HttpServlet { 
 	public void index() { 
 
 	}
