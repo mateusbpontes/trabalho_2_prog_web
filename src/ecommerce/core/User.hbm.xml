@@ -4,11 +4,11 @@
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="ecommerce.core">
-	<class name="Product" table="products">
+	<class name="User" table="users">
 		<id name="id" column="id">
 	</id>
 	<property name="name"/>
-	<property name="description"/>
-	<property name="count"/>
+	<property name="username"/>
+	<property name="pasword"/>
+	<property name="admin"/>
 </hibernate-mapping>
-
