@@ -28,7 +28,15 @@ CREATE TABLE productTags (
 CREATE TABLE shopping (
         id SERIAL PRIMARY KEY,
         date TIMESTAMP,
-	amount FLOAT,
-        userId INTEGER REFERENCES users(id) ON UPDATE CASCADE,
-        productsId INTEGER REFERENCES products(id) ON UPDATE CASCADE
+        userId INTEGER REFERENCES users(id) ON UPDATE CASCADE
 );
+
+
+CREATE TABLE purchasedProducts (
+        id SERIAL PRIMARY KEY,
+	amount FLOAT,
+        productsId INTEGER REFERENCES products(id) ON UPDATE CASCADE,
+	shoppingId INTEGER REFERENCES shopping(id) ON UPDATE CASCADE
+);
+
+)
