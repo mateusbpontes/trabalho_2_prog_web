@@ -4,11 +4,8 @@
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="ecommerce.core">
-	<class name="Product" table="products">
+	<class name="Tag" table="tags">
 		<id name="id" column="id">
 	</id>
 	<property name="name"/>
-	<property name="description"/>
-	<property name="count"/>
 </hibernate-mapping>
-
