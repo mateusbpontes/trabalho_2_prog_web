@@ -7,8 +7,28 @@ CREATE TABLE users (
 );
 
 CREATE TABLE products (
-	id serial primary key,
-	name varchar(255) not null;
-  description varchar(255);
-	count integer;
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	description VARCHAR(255),
+	image VARCHAR(255),
+	count INTEGER,
+	price FLOAT
+);
+
+CREATE TABLE tags (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(50) UNIQUE NOT NULL
+);
+
+CREATE TABLE productTags (
+	productId INTEGER REFERENCES products(id) ON DELETE CASCADE ON UPDATE CASCADE,
+	tagId INTEGER REFERENCES tags(id) ON DELETE SET NULL ON UPDATE CASCADE
+);
+
+CREATE TABLE shopping (
+        id SERIAL PRIMARY KEY,
+        date TIMESTAMP,
+	amount FLOAT,
+        userId INTEGER REFERENCES users(id) ON UPDATE CASCADE,
+        productsId INTEGER REFERENCES products(id) ON UPDATE CASCADE
 );
